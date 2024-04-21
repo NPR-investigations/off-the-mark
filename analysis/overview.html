@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Historical Markers Analysis Notebook - Overview</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="../site_libs/react-18.2.0/react.min.js"></script>
+<script src="../site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="../site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="../site_libs/reactable-binding-0.4.4/reactable.js"></script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/overview.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/overview.html">Overview</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Historical Markers Analysis Notebook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Intro</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">ETL (Extract Transform Load)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../etl/process-hmbd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Process HMDB Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/overview.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/custom-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/organizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Number of Organizations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/civil-war-markers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Civil War Markers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/native-american-markers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Native American Markers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sentence" id="toc-sentence" class="nav-link active" data-scroll-target="#sentence">Sentence:</a></li>
+  <li><a href="#sentence-1" id="toc-sentence-1" class="nav-link" data-scroll-target="#sentence-1">Sentence:</a></li>
+  <li><a href="#sentence-2" id="toc-sentence-2" class="nav-link" data-scroll-target="#sentence-2">Sentence:</a></li>
+  <li><a href="#sentence-3" id="toc-sentence-3" class="nav-link" data-scroll-target="#sentence-3">Sentence:</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/overview.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/overview.html">Overview</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Overview</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">here</span>(<span class="st">"analysis/_functions.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="sentence" class="level3">
+<h3 class="anchored" data-anchor-id="sentence">Sentence:</h3>
+<section id="up_first_sunday_podcast-there-are-more-than-180000-of-these-historical-markers-telling-the-countrys-story" class="level4">
+<h4 class="anchored" data-anchor-id="up_first_sunday_podcast-there-are-more-than-180000-of-these-historical-markers-telling-the-countrys-story">+up_first_sunday_podcast: There are more than 180,000 of these “historical markers” – telling the country’s story</h4>
+</section>
+<section id="digital-with-more-than-180000-of-them-scattered-across-the-u.s." class="level4">
+<h4 class="anchored" data-anchor-id="digital-with-more-than-180000-of-them-scattered-across-the-u.s.">+digital: With more than 180,000 of them scattered across the U.S.</h4>
+</section>
+<section id="marking_hate_watc_radio-there-are-180000-historical-markers-are-all-over-this-country-telling-americas-story." class="level4">
+<h4 class="anchored" data-anchor-id="marking_hate_watc_radio-there-are-180000-historical-markers-are-all-over-this-country-telling-americas-story.">+marking_hate_watc_radio: There are 180,000 historical markers are all over this country telling America’s story.</h4>
+</section>
+<section id="marking_the_frontier_radio-there-are-more-than-180000-of-them" class="level4">
+<h4 class="anchored" data-anchor-id="marking_the_frontier_radio-there-are-more-than-180000-of-them">+marking_the_frontier_radio: There are more than 180,000 of them</h4>
+</section>
+<section id="marking_a_murder_digital-and-its-easy-to-see-why-with-more-than-180000-of-them-no-one-has-any-idea-what-they-all-say." class="level4">
+<h4 class="anchored" data-anchor-id="marking_a_murder_digital-and-its-easy-to-see-why-with-more-than-180000-of-them-no-one-has-any-idea-what-they-all-say.">+marking_a_murder_digital: And it’s easy to see why: With more than 180,000 of them, no one has any idea what they all say.</h4>
+</section>
+<section id="two_way_atc-alright-so-more-than-180000-markers--" class="level4">
+<h4 class="anchored" data-anchor-id="two_way_atc-alright-so-more-than-180000-markers--">+two_way_atc: Alright so more than 180,000 markers -</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span>(<span class="fu">nrow</span>(all_valid_markers_up_df), <span class="at">big.mark =</span> <span class="st">","</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "188,971"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="sentence-1" class="level3">
+<h3 class="anchored" data-anchor-id="sentence-1">Sentence:</h3>
+<section id="up_first_sunday_podcast-because-the-thing-about-this-marker-and-thousands-of-others-across-this-country-is-that-they-are-owned-by-private-groups." class="level4">
+<h4 class="anchored" data-anchor-id="up_first_sunday_podcast-because-the-thing-about-this-marker-and-thousands-of-others-across-this-country-is-that-they-are-owned-by-private-groups.">+up_first_sunday_podcast: Because the thing about this marker and thousands of others across this country, is that they are owned by private groups.</h4>
+</section>
+<section id="digital-because-like-thousands-of-markers-nationwide-it-was-put-up-by-a-private-group" class="level4">
+<h4 class="anchored" data-anchor-id="digital-because-like-thousands-of-markers-nationwide-it-was-put-up-by-a-private-group">+digital: Because like thousands of markers nationwide, it was put up by a private group</h4>
+</section>
+<section id="marking_hate_watc_radio-because-like-thousands-of-markers-across-the-country-its-owned-by-a-private-group" class="level4">
+<h4 class="anchored" data-anchor-id="marking_hate_watc_radio-because-like-thousands-of-markers-across-the-country-its-owned-by-a-private-group">+marking_hate_watc_radio: Because like thousands of markers across the country it’s owned by a private group</h4>
+<p>These are 990’sfrom four private groups:</p>
+<ul>
+<li>E Clampus Vitus: https://projects.propublica.org/nonprofits/organizations/953389522</li>
+<li>Native Daughters Of The Golden West: https://projects.propublica.org/nonprofits/organizations/943011278</li>
+<li>United Daughters of the Confederacy: https://projects.propublica.org/nonprofits/organizations/540631483</li>
+<li>Sons of Confederate Veterans: https://projects.propublica.org/nonprofits/organizations/581329949</li>
+</ul>
+<p>Searching for their markers and adding them up leads to:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>e_clampus_vitus_df <span class="ot">=</span> all_valid_markers_up_df <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(organization, <span class="st">"e clampus"</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>united_sons_daughters_golden_west_df <span class="ot">=</span> all_valid_markers_up_df <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(organization, <span class="st">"native daughters of the golden west|native sons of the golden west"</span>))</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>udc_scv_df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="fu">here</span>(<span class="st">"data/processed/civil_war_heritage_group_markers_df.csv"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(matched_groups, <span class="st">"sons of confederate veterans|united daughters of the confederacy"</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>private_group_example <span class="ot">=</span> <span class="fu">bind_rows</span>(e_clampus_vitus_df ,united_sons_daughters_golden_west_df, udc_scv_df ) <span class="sc">%&gt;%</span> <span class="fu">distinct</span>(marker_id, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span>(<span class="fu">nrow</span>(private_group_example), <span class="at">big.mark=</span> <span class="st">","</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "3,125"</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="sentence-2" class="level3">
+<h3 class="anchored" data-anchor-id="sentence-2">Sentence:</h3>
+<section id="up_first_sunday-the-oldest-markers-in-the-database-go-back-to-the-late-1700s" class="level4">
+<h4 class="anchored" data-anchor-id="up_first_sunday-the-oldest-markers-in-the-database-go-back-to-the-late-1700s">+up_first_sunday: The oldest markers in the database go back to the late 1700s</h4>
+</section>
+<section id="two_way_atc-we-found-markers-going-all-the-way-back-to-the-late-1700s." class="level4">
+<h4 class="anchored" data-anchor-id="two_way_atc-we-found-markers-going-all-the-way-back-to-the-late-1700s.">+two_way_atc: We found markers going all the way back to the late 1700s.</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>all_valid_markers_df  <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(year_erected) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(marker_id, year_erected, url, title, text)  <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat_table</span>(<span class="st">"Oldest Markers"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="sssvgugqhv" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sssvgugqhv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sssvgugqhv thead, #sssvgugqhv tbody, #sssvgugqhv tfoot, #sssvgugqhv tr, #sssvgugqhv td, #sssvgugqhv th {
+  border-style: none;
+}
+
+#sssvgugqhv p {
+  margin: 0;
+  padding: 0;
+}
+
+#sssvgugqhv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sssvgugqhv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sssvgugqhv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sssvgugqhv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sssvgugqhv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sssvgugqhv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sssvgugqhv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sssvgugqhv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sssvgugqhv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sssvgugqhv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sssvgugqhv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sssvgugqhv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sssvgugqhv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sssvgugqhv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sssvgugqhv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sssvgugqhv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sssvgugqhv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sssvgugqhv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sssvgugqhv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sssvgugqhv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sssvgugqhv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sssvgugqhv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sssvgugqhv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sssvgugqhv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sssvgugqhv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sssvgugqhv .gt_left {
+  text-align: left;
+}
+
+#sssvgugqhv .gt_center {
+  text-align: center;
+}
+
+#sssvgugqhv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sssvgugqhv .gt_font_normal {
+  font-weight: normal;
+}
+
+#sssvgugqhv .gt_font_bold {
+  font-weight: bold;
+}
+
+#sssvgugqhv .gt_font_italic {
+  font-style: italic;
+}
+
+#sssvgugqhv .gt_super {
+  font-size: 65%;
+}
+
+#sssvgugqhv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sssvgugqhv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sssvgugqhv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sssvgugqhv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sssvgugqhv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sssvgugqhv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sssvgugqhv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<div style="font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;border-top-style:solid;border-top-width:2px;border-top-color:#D3D3D3;">
+<div class="gt_heading gt_title gt_font_normal" style="text-size:bigger;">Oldest Markers</div>
+<div class="gt_heading gt_subtitle "></div>
+</div>
+<div id="sssvgugqhv" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="sssvgugqhv">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"marker_id":[106135,38976,154772,154778,154784,154797,226272,4523,42586,214124],"year_erected":[1755,1787,1792,1792,1792,1792,1792,1797,1799,1804],"url":["https://www.hmdb.org/m.asp?m=106135","https://www.hmdb.org/m.asp?m=38976","https://www.hmdb.org/m.asp?m=154772","https://www.hmdb.org/m.asp?m=154778","https://www.hmdb.org/m.asp?m=154784","https://www.hmdb.org/m.asp?m=154797","https://www.hmdb.org/m.asp?m=226272","https://www.hmdb.org/m.asp?m=4523","https://www.hmdb.org/m.asp?m=42586","https://www.hmdb.org/m.asp?m=214124"],"title":["william bull","richard montgomery","original federal boundary stone, district of columbia, northwest 8","original federal boundary stone, district of columbia, northeast 2","original federal boundary stone, district of columbia, northeast 8","original federal boundary stone, district of columbia, southeast 9","columbus obelisk","the penitentiary house","battle of lexington monument","william penn"],"text":["<center>william bull<br> of sheldon<br> born 1683 son of stephen bull,<br> the immigrant<br> member colonial house of commons<br> 1706 - 1719<br> colonel of berkeley county regiment<br> tuscarora and yemassee wars.<br> lord's proprietors deputy 1719.<br> member and president of council<br> 1721 - 1737.<br> assisted in laying out of savannah<br> 1733.<br> lieutenant governor of south carolina<br> 1737 - 1744.<br> commissioner under the church act.<br> he and his younger brothers,<br> burnaby and john bull, were<br> commissioners for the building<br> of sheldon church<br> 1753<br> died at sheldon, march 21, 1755.<br> his body lies buried here.<\/center>","<br><i>this<\/i> monument is erected by the order of c<small>ongress<\/small> 25th janry <i>1776<\/i>, to transmit to posterity a grateful remembrance of the patriotism conduct enterprize & perseverance of <i>major general<\/i> r<small>ichard<\/small> m<small>ontgomery<\/small>, who after a series of successes amidst the most discouraging difficulties <i>fell<\/i> in the attack on q<small>uebec<\/small>, 31st decbr 1775. aged 37 years.<br><br> <small>invenit et sculpsit. parisiis. j.j. caffieri sculptor. regius anno domini. mdcclxxvii<\/small>.","jurisdiction of the united states 1792 maryland var 0&#8304; 2’ e","<br><center>jurisdiction of the united states<br>miles 2<br><br>1792<br><br>maryland<br><br>var. 1.12<\/center>","jurisdiction of the united states miles 8 maryland 1792 var 2&#8304; 0’ e","<center>jurisdiction of the united states<br>miles 9<br>291 p<br>1792<br> maryland<br> var 0&#8304; 37’ e<\/center>","<br><i>[original inscription, since destroyed:]<\/i><br> <center>sacred to the memory of chris. columbus<br> octob. xii mdccviiic<\/center><br> <i>[1964 plaque, which remains on the memorial:]<\/i><br> <center><b>columbus monument<\/b><\/center> re-located from north avenue, east of harford road and re-dedicated october 12, 1964.","<center><b>labour, silence, penitence<\/b><br> the penitentiary house<br> erected by <i>legislative<\/i> authority<br> <i>richard howell<\/i>, governor<br> in the xxii year of amern independence<br> mdccxcvii<br> that those who are feared for their crimes<br> may learn to fear the laws and be useful<br> &#8220;hic labor hoc opus!&#8221;<\/center>","<br>sacred to liberty & the rights of mankind!!! the freedom & independence of america, sealed and defended with the blood of her sons.<br><br>this monument is erected by the inhabitants of lexington, under the patronage & at the expense of the commonwealth of massachusetts, to the memory of their fellow citizens, ensign robert munroe, mess. jonas parker, samuel hadley, jonathan harrington jun.r, isaac muzzy, caleb harrington and john brown of lexington, ishael porter of woburn, who fell on this field, the first victims to the sword of british tyranny & oppression, on the morning of the ever memorable nineteenth of april, an. dom. 1775.<br> <br>the die was cast!!! the blood of these martyr’s, in the cause of god & their country, was the cement of the union of these states, then colonies & gave the spring to the spirit, firmness, and resolution of their fellow citizens. they rose as one man, to revenge their brethren’s blood and at the point of the sword to assert & defend their native rights. they nobly dar’d to be free!! the contest was long, bloody & affecting. righteous heaven approved the solemn appeal; victory crowned their arms; and the peace, liberty & independence of the united states of america, was their glorious reward.<br><br><center>built in the year 1799.<\/center><b><br>lower marker:<\/b><br>the remains of those who fell in the battle of lexington were brought here from the old cemetery, april 20, 1835, and buried within the railing in the front of this monument.","<center> pennsylvania<br> granted by<br> charles ii<br> to<br> william penn<br> 1681<br><br> the proprietary arrived<br> 1682<br> made<br> a just and amicable arrangement<br> with the natives<br> for the purchase of their lands<br> and<br> went back to england<br> 1684<br><br> returned to pennsylvania<br> 1699<br> and finally withdrawn<br> to<br> paternal estates<br> 1701<\/center>"]},"columns":[{"id":"marker_id","name":"marker_id","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["106135","38976","154772","154778","154784","154797","226272","4523","42586","214124"],"html":true,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"year_erected","name":"year_erected","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["1755","1787","1792","1792","1792","1792","1792","1797","1799","1804"],"html":true,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"url","name":"url","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["https://www.hmdb.org/m.asp?m=106135","https://www.hmdb.org/m.asp?m=38976","https://www.hmdb.org/m.asp?m=154772","https://www.hmdb.org/m.asp?m=154778","https://www.hmdb.org/m.asp?m=154784","https://www.hmdb.org/m.asp?m=154797","https://www.hmdb.org/m.asp?m=226272","https://www.hmdb.org/m.asp?m=4523","https://www.hmdb.org/m.asp?m=42586","https://www.hmdb.org/m.asp?m=214124"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}},{"id":"title","name":"title","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["william bull","richard montgomery","original federal boundary stone, district of columbia, northwest 8","original federal boundary stone, district of columbia, northeast 2","original federal boundary stone, district of columbia, northeast 8","original federal boundary stone, district of columbia, southeast 9","columbus obelisk","the penitentiary house","battle of lexington monument","william penn"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}},{"id":"text","name":"text","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["&lt;center&gt;william bull&lt;br&gt; of sheldon&lt;br&gt; born 1683 son of stephen bull,&lt;br&gt; the immigrant&lt;br&gt; member colonial house of commons&lt;br&gt; 1706 - 1719&lt;br&gt; colonel of berkeley county regiment&lt;br&gt; tuscarora and yemassee wars.&lt;br&gt; lord's proprietors deputy 1719.&lt;br&gt; member and president of council&lt;br&gt; 1721 - 1737.&lt;br&gt; assisted in laying out of savannah&lt;br&gt; 1733.&lt;br&gt; lieutenant governor of south carolina&lt;br&gt; 1737 - 1744.&lt;br&gt; commissioner under the church act.&lt;br&gt; he and his younger brothers,&lt;br&gt; burnaby and john bull, were&lt;br&gt; commissioners for the building&lt;br&gt; of sheldon church&lt;br&gt; 1753&lt;br&gt; died at sheldon, march 21, 1755.&lt;br&gt; his body lies buried here.&lt;/center&gt;","&lt;br&gt;&lt;i&gt;this&lt;/i&gt; monument is erected by the order of c&lt;small&gt;ongress&lt;/small&gt; 25th janry &lt;i&gt;1776&lt;/i&gt;, to transmit to posterity a grateful remembrance of the patriotism conduct enterprize &amp; perseverance of &lt;i&gt;major general&lt;/i&gt; r&lt;small&gt;ichard&lt;/small&gt; m&lt;small&gt;ontgomery&lt;/small&gt;, who after a series of successes amidst the most discouraging difficulties &lt;i&gt;fell&lt;/i&gt; in the attack on q&lt;small&gt;uebec&lt;/small&gt;, 31st decbr 1775. aged 37 years.&lt;br&gt;&lt;br&gt; &lt;small&gt;invenit et sculpsit. parisiis. j.j. caffieri sculptor. regius anno domini. mdcclxxvii&lt;/small&gt;.","jurisdiction of the united states 1792 maryland var 0&amp;#8304; 2’ e","&lt;br&gt;&lt;center&gt;jurisdiction of the united states&lt;br&gt;miles 2&lt;br&gt;&lt;br&gt;1792&lt;br&gt;&lt;br&gt;maryland&lt;br&gt;&lt;br&gt;var. 1.12&lt;/center&gt;","jurisdiction of the united states miles 8 maryland 1792 var 2&amp;#8304; 0’ e","&lt;center&gt;jurisdiction of the united states&lt;br&gt;miles 9&lt;br&gt;291 p&lt;br&gt;1792&lt;br&gt; maryland&lt;br&gt; var 0&amp;#8304; 37’ e&lt;/center&gt;","&lt;br&gt;&lt;i&gt;[original inscription, since destroyed:]&lt;/i&gt;&lt;br&gt; &lt;center&gt;sacred to the memory of chris. columbus&lt;br&gt; octob. xii mdccviiic&lt;/center&gt;&lt;br&gt; &lt;i&gt;[1964 plaque, which remains on the memorial:]&lt;/i&gt;&lt;br&gt; &lt;center&gt;&lt;b&gt;columbus monument&lt;/b&gt;&lt;/center&gt; re-located from north avenue, east of harford road and re-dedicated october 12, 1964.","&lt;center&gt;&lt;b&gt;labour, silence, penitence&lt;/b&gt;&lt;br&gt; the penitentiary house&lt;br&gt; erected by &lt;i&gt;legislative&lt;/i&gt; authority&lt;br&gt; &lt;i&gt;richard howell&lt;/i&gt;, governor&lt;br&gt; in the xxii year of amern independence&lt;br&gt; mdccxcvii&lt;br&gt; that those who are feared for their crimes&lt;br&gt; may learn to fear the laws and be useful&lt;br&gt; &amp;#8220;hic labor hoc opus!&amp;#8221;&lt;/center&gt;","&lt;br&gt;sacred to liberty &amp; the rights of mankind!!! the freedom &amp; independence of america, sealed and defended with the blood of her sons.&lt;br&gt;&lt;br&gt;this monument is erected by the inhabitants of lexington, under the patronage &amp; at the expense of the commonwealth of massachusetts, to the memory of their fellow citizens, ensign robert munroe, mess. jonas parker, samuel hadley, jonathan harrington jun.r, isaac muzzy, caleb harrington and john brown of lexington, ishael porter of woburn, who fell on this field, the first victims to the sword of british tyranny &amp; oppression, on the morning of the ever memorable nineteenth of april, an. dom. 1775.&lt;br&gt; &lt;br&gt;the die was cast!!! the blood of these martyr’s, in the cause of god &amp; their country, was the cement of the union of these states, then colonies &amp; gave the spring to the spirit, firmness, and resolution of their fellow citizens. they rose as one man, to revenge their brethren’s blood and at the point of the sword to assert &amp; defend their native rights. they nobly dar’d to be free!! the contest was long, bloody &amp; affecting. righteous heaven approved the solemn appeal; victory crowned their arms; and the peace, liberty &amp; independence of the united states of america, was their glorious reward.&lt;br&gt;&lt;br&gt;&lt;center&gt;built in the year 1799.&lt;/center&gt;&lt;b&gt;&lt;br&gt;lower marker:&lt;/b&gt;&lt;br&gt;the remains of those who fell in the battle of lexington were brought here from the old cemetery, april 20, 1835, and buried within the railing in the front of this monument.","&lt;center&gt; pennsylvania&lt;br&gt; granted by&lt;br&gt; charles ii&lt;br&gt; to&lt;br&gt; william penn&lt;br&gt; 1681&lt;br&gt;&lt;br&gt; the proprietary arrived&lt;br&gt; 1682&lt;br&gt; made&lt;br&gt; a just and amicable arrangement&lt;br&gt; with the natives&lt;br&gt; for the purchase of their lands&lt;br&gt; and&lt;br&gt; went back to england&lt;br&gt; 1684&lt;br&gt;&lt;br&gt; returned to pennsylvania&lt;br&gt; 1699&lt;br&gt; and finally withdrawn&lt;br&gt; to&lt;br&gt; paternal estates&lt;br&gt; 1701&lt;/center&gt;"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"nowrap":true,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"sssvgugqhv","dataKey":"cd0d767ed1df875690ba5ea28025cb38"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style","tag.attribs.columns.4.style"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sentence-3" class="level3">
+<h3 class="anchored" data-anchor-id="sentence-3">Sentence:</h3>
+<section id="up_first_sunday-but-really-markers-began-to-take-hold-in-the-early-part-of-the-20th-century." class="level4">
+<h4 class="anchored" data-anchor-id="up_first_sunday-but-really-markers-began-to-take-hold-in-the-early-part-of-the-20th-century.">+up_first_sunday: But really markers began to take hold in the early part of the 20th century.</h4>
+</section>
+<section id="digital-while-some-markers-date-back-centuries-they-proliferated-in-the-20th-century" class="level4">
+<h4 class="anchored" data-anchor-id="digital-while-some-markers-date-back-centuries-they-proliferated-in-the-20th-century">+digital: While some markers date back centuries, they proliferated in the 20th century,</h4>
+</section>
+<section id="two_way_atc-but-really-you-start-to-see-markers-take-hold-in-this-country-in-the-1900s-especially-when-americans-began-to-hit-the-open-road-in-their-new-cars." class="level4">
+<h4 class="anchored" data-anchor-id="two_way_atc-but-really-you-start-to-see-markers-take-hold-in-this-country-in-the-1900s-especially-when-americans-began-to-hit-the-open-road-in-their-new-cars.">+two_way_atc: But really you start to see markers take hold in this country in the 1900s, especially when Americans began to hit the open road in their new cars.</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>all_valid_markers_df <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.by =</span> year_erected)  <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(year_erected) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year_erected, <span class="at">y =</span> n))<span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>)<span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Markers Erected By Year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="overview_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Organization Completeness Summary ---</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df_summary_org <span class="ot">=</span> all_valid_markers_df  <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_org_na =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    organization <span class="sc">==</span> <span class="st">""</span> <span class="sc">~</span> <span class="st">"org_na"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"org_complete"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(is_org_na) <span class="sc">%&gt;%</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> (n <span class="sc">/</span> <span class="fu">sum</span>(n))<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>pct_org_complete <span class="ot">=</span> df_summary_org[df_summary_org<span class="sc">$</span>is_org_na <span class="sc">==</span> <span class="st">"org_complete"</span>, <span class="st">"pct"</span>][[<span class="dv">1</span>]]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Year Erected Completeness Summary</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>df_summary_year_erected <span class="ot">=</span> all_valid_markers_df  <span class="sc">%&gt;%</span> </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_year_erected_na =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(year_erected) <span class="sc">~</span> <span class="st">"year_erected_na"</span>,</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"year_erected_complete"</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(is_year_erected_na) <span class="sc">%&gt;%</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> (n <span class="sc">/</span> <span class="fu">sum</span>(n))<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>pct_year_erected_complete <span class="ot">=</span>df_summary_year_erected[df_summary_year_erected<span class="sc">$</span>is_year_erected_na <span class="sc">==</span> <span class="st">"year_erected_complete"</span>, <span class="st">"pct"</span>][[<span class="dv">1</span>]]</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Reported missing</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>df_reported_missing <span class="ot">=</span> all_valid_markers_df  <span class="sc">%&gt;%</span> </span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(is_missing) <span class="sc">%&gt;%</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> (n <span class="sc">/</span> <span class="fu">sum</span>(n))<span class="sc">*</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Main Marker Table</strong></p>
+<ul>
+<li>The HMDB database has <strong>193,676</strong> markers as of <code>2024-03-22</code> when we were sent a copy of the database.</li>
+<li>71.74% of markers have an organization listed.</li>
+<li>45.69% of markers have a year erected listed.</li>
+<li>2.43% of markers have been reported missing.</li>
+</ul>
+<p><strong>Categories</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_markers_without_category <span class="ot">=</span> <span class="fu">anti_join</span>(all_valid_markers_df, marker_categories_df, <span class="at">by =</span> <span class="st">"marker_id"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(marker_id, title, organization, year_erected, marker_no, url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>7</strong> markers do not have a category listed. This means that the majority of markers have been categorized which will be helpful for analysis.</li>
+</ul>
+<p>The categories are:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_unique_categories <span class="ot">=</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  marker_categories_df  <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(category)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat_table</span>(df_unique_categories, <span class="st">"Categories"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="xmukesihnk" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xmukesihnk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xmukesihnk thead, #xmukesihnk tbody, #xmukesihnk tfoot, #xmukesihnk tr, #xmukesihnk td, #xmukesihnk th {
+  border-style: none;
+}
+
+#xmukesihnk p {
+  margin: 0;
+  padding: 0;
+}
+
+#xmukesihnk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xmukesihnk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xmukesihnk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xmukesihnk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xmukesihnk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xmukesihnk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xmukesihnk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xmukesihnk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xmukesihnk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xmukesihnk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xmukesihnk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xmukesihnk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xmukesihnk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xmukesihnk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xmukesihnk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xmukesihnk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xmukesihnk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xmukesihnk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xmukesihnk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xmukesihnk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xmukesihnk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xmukesihnk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xmukesihnk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xmukesihnk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xmukesihnk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xmukesihnk .gt_left {
+  text-align: left;
+}
+
+#xmukesihnk .gt_center {
+  text-align: center;
+}
+
+#xmukesihnk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xmukesihnk .gt_font_normal {
+  font-weight: normal;
+}
+
+#xmukesihnk .gt_font_bold {
+  font-weight: bold;
+}
+
+#xmukesihnk .gt_font_italic {
+  font-style: italic;
+}
+
+#xmukesihnk .gt_super {
+  font-size: 65%;
+}
+
+#xmukesihnk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xmukesihnk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xmukesihnk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xmukesihnk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xmukesihnk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xmukesihnk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xmukesihnk .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<div style="font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;border-top-style:solid;border-top-width:2px;border-top-color:#D3D3D3;">
+<div class="gt_heading gt_title gt_font_normal" style="text-size:bigger;">Categories</div>
+<div class="gt_heading gt_subtitle "></div>
+</div>
+<div id="xmukesihnk" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="xmukesihnk">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"category":["agriculture","native americans","churches & religion","colonial era","notable buildings","forts and castles","education","industry & commerce","natural features","notable events","settlements & settlers","communications","war of 1812","war, us civil","war, us revolutionary","war, world i","war, world ii","war, cold","cemeteries & burial sites","political subdivisions","war, french and indian","railroads & streetcars","war, korean","arts, letters, music","civil rights","war, spanish-american","entertainment","military","landmarks","war, vietnam","horticulture & forestry","fraternal or sororal organizations","peace","natural resources","man-made features","science & medicine","patriots & patriotism","abolition & underground rr","labor unions","sports","war, mexican-american","roads & vehicles","waterways & vessels","bridges & viaducts","air & space","animals","environment","wars, non-us","heroes","exploration","charity & public work","war, 2nd iraq","war, afghanistan","wars, us indian","disasters","anthropology & archaeology","african americans","war, texas independence","notable places","government & politics","war, 1st iraq & desert storm","hispanic americans","asian americans","paleontology","architecture","women","parks & recreational areas","law enforcement","9/11 attacks","immigration"]},"columns":[{"id":"category","name":"category","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["agriculture","native americans","churches &amp; religion","colonial era","notable buildings","forts and castles","education","industry &amp; commerce","natural features","notable events","settlements &amp; settlers","communications","war of 1812","war, us civil","war, us revolutionary","war, world i","war, world ii","war, cold","cemeteries &amp; burial sites","political subdivisions","war, french and indian","railroads &amp; streetcars","war, korean","arts, letters, music","civil rights","war, spanish-american","entertainment","military","landmarks","war, vietnam","horticulture &amp; forestry","fraternal or sororal organizations","peace","natural resources","man-made features","science &amp; medicine","patriots &amp; patriotism","abolition &amp; underground rr","labor unions","sports","war, mexican-american","roads &amp; vehicles","waterways &amp; vessels","bridges &amp; viaducts","air &amp; space","animals","environment","wars, non-us","heroes","exploration","charity &amp; public work","war, 2nd iraq","war, afghanistan","wars, us indian","disasters","anthropology &amp; archaeology","african americans","war, texas independence","notable places","government &amp; politics","war, 1st iraq &amp; desert storm","hispanic americans","asian americans","paleontology","architecture","women","parks &amp; recreational areas","law enforcement","9/11 attacks","immigration"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"nowrap":true,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"xmukesihnk","dataKey":"af4065107935ff3c357b6b31fbe501a4"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><strong>Series</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_markers_without_series <span class="ot">=</span> <span class="fu">anti_join</span>(all_valid_markers_df, marker_series_df, <span class="at">by =</span> <span class="st">"marker_id"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(marker_id, title, organization, year_erected, marker_no, url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>65</strong>% of markers are not part of a series.</li>
+</ul>
+<p>The series are:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_unique_series <span class="ot">=</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  marker_series_df <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(name, optional_title)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat_table</span>(df_unique_series, <span class="st">"Series"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="tkmhxymcby" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tkmhxymcby table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tkmhxymcby thead, #tkmhxymcby tbody, #tkmhxymcby tfoot, #tkmhxymcby tr, #tkmhxymcby td, #tkmhxymcby th {
+  border-style: none;
+}
+
+#tkmhxymcby p {
+  margin: 0;
+  padding: 0;
+}
+
+#tkmhxymcby .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tkmhxymcby .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tkmhxymcby .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tkmhxymcby .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tkmhxymcby .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tkmhxymcby .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tkmhxymcby .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tkmhxymcby .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tkmhxymcby .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tkmhxymcby .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tkmhxymcby .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tkmhxymcby .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tkmhxymcby .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tkmhxymcby .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tkmhxymcby .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tkmhxymcby .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tkmhxymcby .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tkmhxymcby .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tkmhxymcby .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tkmhxymcby .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tkmhxymcby .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tkmhxymcby .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tkmhxymcby .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tkmhxymcby .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tkmhxymcby .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tkmhxymcby .gt_left {
+  text-align: left;
+}
+
+#tkmhxymcby .gt_center {
+  text-align: center;
+}
+
+#tkmhxymcby .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tkmhxymcby .gt_font_normal {
+  font-weight: normal;
+}
+
+#tkmhxymcby .gt_font_bold {
+  font-weight: bold;
+}
+
+#tkmhxymcby .gt_font_italic {
+  font-style: italic;
+}
+
+#tkmhxymcby .gt_super {
+  font-size: 65%;
+}
+
+#tkmhxymcby .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tkmhxymcby .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tkmhxymcby .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tkmhxymcby .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tkmhxymcby .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tkmhxymcby .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tkmhxymcby .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<div style="font-family:system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;border-top-style:solid;border-top-width:2px;border-top-color:#D3D3D3;">
+<div class="gt_heading gt_title gt_font_normal" style="text-size:bigger;">Series</div>
+<div class="gt_heading gt_subtitle "></div>
+</div>
+<div id="tkmhxymcby" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="tkmhxymcby">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"name":["virginia, fairfax county history commission","maryland civil war trails","virginia civil war trails","maryland, lost rockville &#8211; 1801 to 1850","baltimore and ohio railroad (b&o)","braddock’s road and maj. gen. edward braddock","believe it or not","george washington slept here",null,"pony express national historic trail","manassas gap railroad","the historic national road","washington and old dominion (w&od) railroad","west virginia civil war trails","north carolina civil war trails","chesapeake and ohio (c&o) canal","virginia, prince william county historical commission","virginia, historic occoquan","virginia, wartime manassas walking tour","antietam campaign war department markers","virginia, city of falls church","e clampus vitus","lincoln 1861 inaugural train stops","battlefield trails - civil war","virginia, norfolk heritage cannonball trail","wabash & erie canal","orange and alexandria railroad","virginia, the city of alexandria","lewis & clark expedition","maryland, saint mary's city","maryland, fort mchenry","oregon trail","defenses of washington","mark twain bret harte trail","maryland, gwynns falls trail","the washington-rochambeau route","pennsylvania, the harrisburg history project","new jersey, bergen county historical society","maryland, baltimore city historical markers","maryland, bolton hill historic district","maryland, washington county historical advisory committee","national historic landmarks","susquehanna and tidewater canal","florida, st. augustine freedom trail","gettysburg campaign","african american heritage trail","new york, historical society of rockland county","lincoln highway","william bartram trails","new jersey, morris county heritage commission","pennsylvania, battle of hanover walking tour","battlefield trails - revolutionary war","chickamauga campaign heritage trail","great indian warrior / trading path","ohio and erie canal","medal of honor recipients","ohio, delaware county historical society","freeman markers (richmond battlefields)","battlefield markers association","pennsylvania railroad (prr)","martin luther king, jr.","south carolina heritage corridor","pennsylvania civil war trails","new jersey, hunterdon county cultural and heritage commission","downtown heritage trail","santa fe trail","battlefield trails - war of 1812","general henry knox trail","postal mail and philately","the miami & erie canal","tennessee civil war trails","looking for lincoln","arizona, the presidio trail","massachusetts bay colony&#8212;tercentenary commission markers","new jersey, sussex county board of chosen freeholders","arizona, historic florence walking tour","indian wars battlefield trails","erie & kalamazoo railroad","trail of tears","south carolina, abbeville historical sites tour","black hawk war","potawatomi trail of death","maryland, chesapeake city historic district","daughters of utah pioneers","sons of utah pioneers","utah, salt lake city downtown walking tour","utah pioneer trails and landmarks association","daughters of the american revolution","john hunt morgan’s raid - jefferson county, ohio","south carolina, anderson county historical association/society","south carolina, cherokee county historical and preservation society","arizona, pistols, plows and petticoats historic driving tour","mormon pioneer trail","california trail","overland trail","south carolina, abbeville county historical society/commission","south carolina, greenville county historic preservation commission","south carolina, mccormick county historical society","south carolina, mccormick county historical commission","the sullivan-clinton expedition against the iroquois indians","juan bautista de anza national historic trail","native sons/daughters of the golden west","south carolina, aiken county historical society","south carolina, aiken county historical commission","signers of the declaration of independence","south carolina, laurens county historical society","south carolina, saluda county historical commission","south carolina, saluda county historical society","south carolina, chester county historical commission","south carolina, colleton county historical society","south carolina, williamsburg county, three rivers historical society","south carolina, williamsburg county historical society","south carolina, calhoun county historical commission/society","south carolina, chesterfield county historical and preservation societies","dominguez y escalante expedition","south carolina, spartanburg music trail","whiskey rebellion","carnegie libraries","wisconsin, madison landmarks commission","wisconsin, dane county historical society","university of wisconsin","utah - kanab \"walk of fame\"","transcontinental railroad","the spirit of ’76, america’s bicentennial celebration","maryland, rockville's african american heritage walking tour","wisconsin’s maritime trails","california - sutter creek gold mine trail","works progress administration (wpa) projects","el camino real de tierra adentro","statue of liberty replicas","missouri - a state divided: the civil war in missouri","illinois, sprinfield - lincoln home national historic site","erie canal","south carolina, preservation society of charleston","mississippi blues trail","south carolina, greenwood county historical society","mojave road (old government road)","south carolina, york county historical commission","south carolina, union county historical society","spirit of the american doughboy - e. m. viquesney","desert training center","u.s. route 66","stephen tyng mather","san diego - gaslamp quarter","forbes road","rosenwald schools","el camino real de los tejas national historic trail","u.s.s. maine memorial markers","new jersey - fort hancock walking tour","florida - west volusia historical society","south carolina, charleston county, st. james- santee parish historical society","south carolina, beaufort county historical society","historic new york state","florida - sanford historic preservation board","indiana cemetery heritage","antonio de espejo entrada of 1582-1583","georgia historical society","indiana historical bureau markers","mississippi country music trail","natchez trace","sons of the american revolution (sar)","portolá expedition","kansas city - native sons and daughters of greater kansas city","ohio, scioto county, experience our heritage","city of david tour","caesarea philippi tour","sherman’s march to the sea","kansas, alma, city of native stone","tel megiddo","kansas, dodge city trail of fame","the tiberias archeological park","general herkimer's 40 mile march","gettysburg - seminary ridge historic walking tour","michigan historical commission","ohio historical society / the ohio history connection","kansas, osawatomie driving tour","missouri’s civil war","idaho state historical society","victoria cross and george cross recipients","kansas historical society","nebraska state historical society","illinois state historical society","wisconsin historical society","kentucky historical society","blue ridge parkway","colorado - history colorado","liberty bell replica","iowa - state historical society of iowa","american quarter horse markers","comanche trail into mexico","united daughters of the confederacy","star spangled banner national historic trail","southern pacific railroad","sons of confederate veterans/united confederate veterans","missouri, the state historical society of","unesco world heritage sites","ohio revolutionary memorial commission","mississippi freedom trail","military order of the purple heart","minnesota historical society","minnesota, little falls heritage preservation walking/driving tour","harriet tubman underground railroad byway","great lakes seaway trail national scenic byway","logan circle heritage trail","missouri, battle of springfield","texas 1936 centennial markers and monuments","kansas, baxter springs civil war tour","oklahoma historical society","mormon battalion","nevada - 20-mile museum - hwy 40 scenic bypass","donner summit historical society","civil rights in education heritage trail","civilian conservation corps (ccc)","union canal","merci train boxcars","katy trail state park","missouri, clay county historic landmarks","john hunt morgan heritage trail in indiana","francis asbury, traveling methodist preacher","applegate trail","original federal boundary stones","missouri, pleasant hill downtown association","pennsylvania - beaver county historical research and landmarks foundation","france - bayeux - circuit du vieux bayeux","great platte river road","virginia, clinch river forts circa 1774","4-h youth program","chicago rock island & pacific railway","buffalo soldiers","arkansas civil war sesquicentennial commission","the crooked road: virginia’s heritage music trail","san antonio-el paso road","madonnas of the trail","\"safety follows wisdom\" portland cement association safety trophies","d.c. - points of light volunteer pathway","arkansas centennial commission","butterfield overland mail","the colonial dames of america, national society of","chenango canal","california - walnut creek heritage walk","new jersey women’s heritage trail","california - el cerrito - san pablo avenue historical-cultural pavers","us navy armed guard","illinois, chicago landmarks commission","michigan - union city heritage water trail","atchison, topeka and santa fe railway","b-52 bomber crash in maryland","mississippi mound trail","motorcities national heritage area","pennsylvania history tour, tobyhanna township","michigan - hemingway's michigan","michigan - little traverse regional historical society","still on patrol","john hunt morgan heritage trail in kentucky","louisiana, marksville historical markers driving tour","united states daughters of 1812, national society","tennessee - history of the farragut area","mississippi state historical marker program","the four chaplains","michigan - historical society of michigan","national natural landmarks","coal creek watershed foundation","francis marion trail","asce civil engineering landmarks","georgia civil war trails","john hunt morgan heritage trail in ohio","chickamauga and chattanooga national military park, orchard knob reservation","chickamauga and chattanooga national military park, bragg reservation","chickamauga and chattanooga national military park, sherman reservation","chickamauga and chattanooga national military park, iowa reservation","chickamauga and chattanooga national military park, cravens house reservation","michigan walk of fame","louisiana ancient mounds trail","mississippi - natchez trails","canada, historic sites and monuments board","chickamauga and chattanooga national military park, seventy-third pennsylvania reservation","chickamauga and chattanooga national military park, delong reservation","chickamauga and chattanooga national military park, turchin reservation","chickamauga and chattanooga national military park, ohio reservation","chickamauga and chattanooga national military park, point park","chickamauga and chattanooga national military park, lookout mountain","chickamauga and chattanooga national military park, missionary ridge","chickamauga and chattanooga national military park: november 23, 1863","chickamauga and chattanooga national military park: november 24, 1863","chickamauga and chattanooga national military park: november 25, 1863","kentucky, sportman’s hill","anniston civil rights trail, alabama","distinguished service cross/navy cross/air force cross recipients","william g. pomeroy foundation","northern virginia civil war graffiti trail","a tennessee overhill experience - from furs to factories","tennessee, greeneville, windows to the past historic mural project","new york, new york city historic landmarks preservation center cultural medallions","ledroit park/bloomingdale heritage trail","atchafalaya water heritage trail","daughters of colonial wars","meridian, mississippi civil rights trail","tennessee - oak hill - secret city commemorative walk","oregon beaver boards","nobles trail","historic trees","daughters of the american colonists","berlin wall","lassen trail and burnett cutoff","beckwourth trail","mississippi, vicksburg heritage walking trail","tennessee historical commission","sons and daughters of idaho pioneers","the nez perce trail","uk, england, london, marchmont association plaques","colorado - montrose - preserving our heritage","old spanish national trail","uk, england, city of london corporation","american presbyterian and reformed historic sites","montana national register sign program","the hatfield-mccoy feud","appalachian iron furnaces","national cemeteries","freedom rock memorials","booth's escape","william g. pomeroy foundation legends & lore series","dc, art on call","george washington carver","shaw heritage trail","tenleytown heritage trail","anacostia heritage trail","brightwood heritage trail","greater deanwood heritage trail","federal triangle heritage trail","barracks row heritage trail","columbia heights heritage trail","adams morgan heritage trail","southwest heritage trail","mount pleasant heritage trail","greater h street heritage trail","georgia avenue / pleasant plains heritage trail","greater u street heritage trail","delaware canal (aka delaware division of the pennsylvania canal)","lehigh canal","the colonial dames of america","national votes for women trail","jewish american society for historic preservation.","uk, northern ireland, ulster history circle","colorado, denver, wall street of the rockies","missouri, st. louis walk of fame","trails west inc.","kentucky, bowling green heritage walk","james joyce pub awards","tuskegee civil rights and historic trail, alabama","illinois, remembering the 1917 east st. louis race riot","historically black colleges and universities","grammy award winners","california historical landmarks","pennsylvania historical and museum commission","illinois, waterloo beautification committee","kentucky, city of west point","mary jemison - white woman of the genessee","ieee milestones in electrical engineering and computing","rainbow honor walk","kentucky - confederate raids and invasions, and a federal retreat","covered bridges","d.c. - transportation walk","ventura county historical landmarks","new mexico women’s historic marker initiative","quakerism","asae historic landmarks of agricultural engineering","loop trolley","missouri, st. louis - history underfoot","missouri, st. louis, the cherokee-lemp history walk","tennessee, the historical commission of metropolitan nashville and davidson county","missouri, st. louis cardinals greatest moments","yreka trail","henness pass","virginia, fredericksburg: timeless.","virginia, spotsylvania county museum","west virginia, washington heritage trail","tennessee, memphis, center city commission","el camino real, &#8220;the king's highway&#8221; (california)","truckee trail","chinese heritage sites of the american west","sons of the american colonists","west virginia 9","indiana, cultural trail indianapolis","the colonial dames xvii century, national society","historic sites in journalism","west virginia archives and history","virginia, old town fairfax","missouri, city of washington","missouri, owensville quilt patterns","pennsylvania, newtown square historical preservation society","nova parks","missouri, st. louis, cherokee station business association","the rhode island black heritage society","time capsules","acadian history","frostburg state university student government association","maryland, town of oakland","route 66 roadside attractions","maryland, friendsville history tour","kentucky, harrodsburg, james harrod trust","jesse james","african methodist episcopal (ame) church","african methodist episcopal zion (ame zion) church","christian methodist episcopal (cme) church","west virginia, the city of thomas","unitarian universalism (uuism)","mary mcleod bethune","mary church terrell","eleanor roosevelt","susan b. anthony","elizabeth cady stanton","clara barton","the beatles","rural electrification &#128161;","former u.s. presidents: #01 george washington","former u.s. presidents: #44 barack obama","former u.s. presidents: #43 george w. bush","former u.s. presidents: #42 william jefferson \"bill\" clinton","former u.s. presidents: #41 george h.w. bush","former u.s. presidents: #40 ronald reagan","new jersey, city of atlantic city","miss america walk","former u.s. presidents: #39 james earl \"jimmy\" carter, jr.","former u.s. presidents: #38 gerald r. ford, jr.","former u.s. presidents: #37 richard m. nixon","former u.s. presidents: #36 lyndon b. johnson","former u.s. presidents: #35 john f. kennedy","former u.s. presidents: #34 dwight d. eisenhower","former u.s. presidents: #33 harry s. truman","former u.s. presidents: #32 franklin d. roosevelt","former u.s. presidents: #31 herbert hoover","former u.s. presidents: #30 calvin coolidge","former u.s. presidents: #29 warren g. harding","former u.s. presidents: #28 woodrow wilson","former u.s. presidents: #27 william howard taft","former u.s. presidents: #26 theodore roosevelt","former u.s. presidents: #25 william mckinley","former u.s. presidents: #22 and #24 grover cleveland","former u.s. presidents: #23 benjamin harrison","former u.s. presidents: #21 chester a. arthur","former u.s. presidents: #20 james a. garfield","former u.s. presidents: #19 rutherford b. hayes","former u.s. presidents: #18 ulysses s. grant","former u.s. presidents: #17 andrew johnson","former u.s. presidents: #16 abraham lincoln","former u.s. presidents: #15 james buchanan","former u.s. presidents: #14 franklin pierce","former u.s. presidents: #13 millard fillmore","former u.s. presidents: #12 zachary taylor","former u.s. presidents: #11 james k. polk","former u.s. presidents: #10 john tyler","former u.s. presidents: #09 william henry harrison","former u.s. presidents: #08 martin van buren","former u.s. presidents: #07 andrew jackson","former u.s. presidents: #06 john quincy adams","former u.s. presidents: #05 james monroe","former u.s. presidents: #04 james madison","former u.s. presidents: #03 thomas jefferson","former u.s. presidents: #02 john adams","national underground railroad network to freedom","lighthouses","delaware public archives","delaware state parks","university of delaware","art deco","historic bells","west virginia university legends","missouri, chillicothe downtown mural walking tour","west virginia, berkeley springs, town of bath lots","dc, then and now: capitol riverfront","pennsylvania, easton, karl stirner arts trail","bend heritage walk","asm international historical landmarks","ohio, napoleon heritage society","west virginia, martinsburg historic properties","villanova university","kit carson trail","virginia, strasburg, how strata shaped strategy: the hupp's hill civil war/karst interpretive walking trail","missouri, overland historical society","missouri, st. louis, soulard historic district &#9884;&#65039;","los angeles historic-cultural monument","schuylkill canal","aiaa historic aerospace sites","women airforce service pilots (wasp)","morris canal","florida east coast railroad and hotels","former u.s. presidents: #45 donald j. trump","virginia legends walk","washington’s burgess routes","ohio, portsmouth, floodwall murals","lynching in america","francis marion trail","virginia, corporation of newport news","tennessee music pathways","missouri, columbia, african-american heritage trail","the '89er trail","tuskegee airmen","virginia, lexington, righteous and rascals of rockbridge","north carolina division of archives and history","virginia department of historic resources","minnesota: geological society of minnesota","the &#268;i&#269;m&#601;hán trail, port townsend, washington","washington, port townsend, hidden history","south dakota state historical society markers","lost at sea","the legacy walk","canada, ontario heritage foundation","washington, ballard historical society","pennsylvania, pittsburgh history and landmarks foundation","lafayette’s farewell tour","the grand army of the republic","new york, broadway - the canyon of heroes","maine, portland freedom trail","the museum in the streets®: auburn-lewiston, maine","the museum in the streets®: augusta, maine – the civil war","the museum in the streets®: augusta, maine","the museum in the streets®: biddeford, maine","the museum in the streets®: kennebunk, maine","georgia, historic macon music registry","the museum in the streets®: urbanna, virginia","the museum in the streets®: danbury, connecticut","the museum in the streets®: ridgefield, connecticut","the museum in the streets®: minneapolis, minnesota","the museum in the streets®: altamont, new york","virginia, town of herndon","virginia, falls church, tinner hill heritage trail","the museum in the streets®: millbrook, new york","the museum in the streets®: belfast, maine","the museum in the streets®: searsport, maine","birmingham civil rights heritage trail","maryland historical trust","chicago tribute","louisiana myths & legends byway","maryland, mardela springs, barren creek springs village","san francisco giants wall of fame","pennsylvania canal","historic mechanical engineering landmarks","the museum in the streets®: ossining, new york","new york, flushing freedom mile","the museum in the streets®: hastings-on-hudson, new york","tennessee, city of alcoa","dc, american revolution statuary","west virginia, the city of keyser","missouri – battle of westport","city of madrid - \"yellow diamond\"","greenwich village society for historic preservation","greenville textile heritage","tennessee – williamson county historical society","hungry for history","rotary international","barcelona programes de memòria","pennsylvania, washington county history and landmarks foundation","heroes of the dutch resistance (gseg)","roissy: étonnant village / unexpected village","histoire de paris","indiana, women's club of newburgh","new york, staten island, willowbrook mile","northwestern pacific railroad","give streets a face / geef straten een gezicht","dutch politicians (gseg)","scientists (gseg)","dutch sports (gseg)","dutch artists (gseg)","groningen stadsmonumenten","dutch literature (gseg)","outer banks national scenic byway","minnesota great river road","grant’s march through louisiana","tennessee, clinton historic downtown","dutch naval history (gseg)","milan red-gray stelae","michigan legal milestones","knoxville history project - downtown art wraps","united methodist church historic sites","pennsylvania state university","historic graffiti cruise route","pennsylvania, ride! philadelphia","pennsylvania keystone markers","historic transportation canals","gold star families","university of illinois","women (gseg)","national register of historic places","the thailand-burma railway","selskabet for oslo byes vel","american revolution and u.s. constitution bicentennial living witness trees","georgia - augusta african-american history walk","liberation of paris","the holocaust","old mill park","captain john smith chesapeake national historic trail","nyc parks","ohio, kings island","new hampshire historical highway markers","trafalgar way","new hampshire, the black heritage trail of","borscht belt historical marker project","literary landmarks","baseball hall of famers","nc civil rights trail","jens jensen","valor in aerial operations","chicago's charter jubilee","the cross of sacrifice","mississippi writers trail","new mexico, historical society of new mexico","fort scott, kansas","the freedom tree","alabama historical association","city of vancouver heritage building","distinguished service medal","kansas, harvey county historical society","chesapeake & delaware (c&d) canal","upstate heritage quilt trail","u.s. national d-day memorial","ireland, dublin city council commemorative plaques","stolpersteine","dora franklin finley african-american heritage trail of mobile","porto world heritage","perry county heritage trail in pennsylvania.","wisconsin, kenosha city landmarks","canada, ontario, prescott designated heritage buildings"],"optional_title":["roadside marker programs, county","war, u.s. civil","war, u.s. civil","walking and driving tours","railroads","roads and trails","","former u.s. presidents",null,"roads and trails","railroads","roads and trails","railroads","war, u.s. civil","war, u.s. civil","canals","historical society collections","walking and driving tours","walking and driving tours","war, u.s. civil","walking and driving tours","heritage, regional","former u.s. presidents","war, u.s. civil","walking and driving tours","canals","railroads","roadside markers, municipal","roads and trails","walking and driving tours","walking and driving tours","roads and trails","war, u.s. civil","roads and trails","walking and driving tours","war, u.s. revolutionary","historical society collections","historical society collections","walking and driving tours","walking and driving tours","historical society collections","landmark collections","canals","walking and driving tours","war, u.s. civil","washington dc heritage trails","historical society collections","roads and trails","roads and trails","historical society collections","walking and driving tours","war, u.s. revolutionary","war, u.s. civil","roads and trails","canals","valor in war","historical society collections","war, u.s. civil","war, u.s. civil","railroads","civil rights","walking and driving tours","war, u.s. civil","historical society collections","washington dc heritage trails","roads and trails","war of 1812","war, u.s. revolutionary","communications","canals","war, u.s. civil","former u.s. presidents","walking and driving tours","heritage, state and provincial","historical society collections","walking and driving tours","wars, u.s. indian","railroads","roads and trails","walking and driving tours","wars, u.s. indian","wars, u.s. indian","walking and driving tours","heritage, regional","heritage, regional","walking and driving tours","historical society collections","heritage, national","war, u.s. civil","historical society collections","historical society collections","walking and driving tours","roads and trails","roads and trails","roads and trails","historical society collections","historical society collections","historical society collections","historical society collections","war, u.s. revolutionary","roads and trails","historical society collections","historical society collections","historical society collections","war, u.s. revolutionary","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","roads and trails","walking and driving tours","","education","historical society collections","historical society collections","education","walking and driving tours","railroads","","walking and driving tours","roads and trails","walking and driving tours","charity and public works","roads and trails","historical replicas","war, u.s. civil","walking and driving tours","canals","historical society collections","music","historical society collections","roads and trails","historical society collections","historical society collections","war, world war i","war, world war ii","roads and trails","environment and conservation","walking and driving tours","roads and trails","education","roads and trails","war, spanish-american","walking and driving tours","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","roads and trails","roadside marker programs, state","roadside marker programs, state","music","roads and trails","heritage, national","roads and trails","historical society collections","walking and driving tours","israel","israel","war, u.s. civil","walking and driving tours","israel","walking and driving tours","israel","war, u.s. revolutionary","war, u.s. civil","roadside marker programs, state","roadside marker programs, state","walking and driving tours","war, u.s. civil","roadside marker programs, state","valor in war","roadside marker programs, state","historical society collections","roadside marker programs, state","roadside marker programs, state","roadside marker programs, state","walking and driving tours","roadside marker programs, state","historical replicas","historical society collections","animals","roads and trails","heritage, national","war of 1812","railroads","heritage, national","historical society collections","heritage, international","historical society collections","civil rights","valor in war","historical society collections","walking and driving tours","abolition and the underground railroad","walking and driving tours","washington dc heritage trails","war, u.s. civil","heritage, state and provincial","war, u.s. civil","historical society collections","war, mexican american","roads and trails","historical society collections","civil rights","environment and conservation","canals","railroads","railroads","historical society collections","war, u.s. civil","religion","roads and trails","washington dc heritage trails","historical society collections","historical society collections","walking and driving tours","roads and trails","frontier forts","education","railroads","valor in war","war, u.s. civil","music","roads and trails","roads and trails","industry","washington dc heritage trails","roadside marker programs, state","roads and trails","heritage, national","canals","walking and driving tours","heritage, state and provincial","walking and driving tours","war, world war ii","historical society collections","walking and driving tours","railroads","war, cold","roads and trails","heritage, city or county","heritage, city or county","walking and driving tours","historical society collections","war, world war ii","war, u.s. civil","walking and driving tours","heritage, national","heritage, state and provincial","historical society collections","valor in war","historical society collections","environment and conservation","heritage, regional","roads and trails","industry","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","heritage, state and provincial","roads and trails","walking and driving tours","heritage, national","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","sports","civil rights","valor in war","william g. pomeroy foundation","war, u.s. civil","heritage, state and provincial","heritage, city or county","heritage, city or county","washington dc heritage trails","environment and conservation","heritage, national","civil rights","war, world war ii","historical society collections","roads and trails","heritage, national","heritage, national","war, cold","roads and trails","roads and trails","walking and driving tours","roadside marker programs, state","heritage, regional","wars, u.s. indian","heritage, city or county","walking and driving tours","roads and trails","heritage, city or county","religion","historical society collections","folklore and customs","industry","military veterans","valor in war","war, u.s. civil","william g. pomeroy foundation","washington dc heritage trails","education","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","canals","canals","heritage, national","william g. pomeroy foundation","heritage, national","heritage, city or county","walking and driving tours","heritage, state and provincial","historical society collections","heritage, state and provincial","folklore and customs","civil rights","civil rights","education","music","landmark collections","roadside marker programs, state","historical society collections","roadside markers, municipal","war, french & indian","industry","lgbt history","war, u.s. civil","bridges","washington dc heritage trails","landmark collections","heritage, state and provincial","religion","industry","railroads","walking and driving tours","walking and driving tours","historical society collections","sports","roads and trails","roads and trails","heritage, city or county","historical society collections","heritage, state and provincial","heritage, city or county","roads and trails","roads and trails","heritage, regional","heritage, national","roads and trails","roads and trails","heritage, national","communications","roadside marker programs, state","heritage, city or county","heritage, city or county","heritage, city or county","historical society collections","parks and recreational areas","walking and driving tours","heritage, state and provincial","heritage, city or county","heritage, international","education","heritage, city or county","roads and trails","walking and driving tours","historical society collections","outlaws","religion","religion","religion","walking and driving tours","religion","civil rights","civil rights","civil rights","civil rights","civil rights","war, u.s. civil","music","communications","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","roadside markers, municipal","walking and driving tours","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","abolition and the underground railroad","communications","roadside marker programs, state","parks and recreational areas","education","architecture","communications","sports","walking and driving tours","walking and driving tours","heritage, city or county","walking and driving tours","walking and driving tours","industry","historical society collections","historical society collections","education","roads and trails","war, u.s. civil","historical society collections","historical society collections","landmark collections","canals","industry","war, world war ii","canals","railroads","former u.s. presidents","heritage, state and provincial","roads and trails","walking and driving tours","civil rights","war, u.s. revolutionary","historical society collections","music","heritage, city or county","roads and trails","war, world war ii","walking and driving tours","roadside marker programs, state","roadside marker programs, state","historical society collections","roads and trails","heritage, city or county","roadside marker programs, state","ships","lgbt history","heritage, state and provincial","historical society collections","landmark collections","war, u.s. revolutionary","heritage, national","walking and driving tours","abolition and the underground railroad","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","music","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","roadside markers, municipal","walking and driving tours","the museum in the streets®","the museum in the streets®","the museum in the streets®","civil rights","roadside marker programs, state","roadside markers, municipal","roads and trails","walking and driving tours","sports","canals","industry","the museum in the streets®","historical society collections","the museum in the streets®","roadside markers, municipal","war, u.s. revolutionary","walking and driving tours","war, u.s. civil","roadside markers, municipal","historical society collections","industry","roadside marker programs, county","william g. pomeroy foundation","charity and public works","roadside markers, municipal","landmark collections","give streets a face / geef straten een gezicht","roadside markers, municipal","roadside markers, municipal","heritage, city or county","walking and driving tours","railroads","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","roadside markers, municipal","give streets a face / geef straten een gezicht","walking and driving tours","walking and driving tours","war, u.s. civil","walking and driving tours","give streets a face / geef straten een gezicht","roadside markers, municipal","judicial","walking and driving tours","religion","education","heritage, city or county","walking and driving tours","roadside marker programs, state","william g. pomeroy foundation","valor in war","education","give streets a face / geef straten een gezicht","landmark collections","war, world war ii","historical society collections","environment and conservation","walking and driving tours","war, world war ii","war, world war ii","industry","roads and trails","parks and recreational areas","parks and recreational areas","roadside marker programs, state","roads and trails","heritage, state and provincial","heritage, state and provincial","landmark collections","sports","civil rights","parks and recreational areas","valor in war","heritage, city or county","valor in war","communications","historical society collections","frontier forts","valor in war","roadside marker programs, state","heritage, city or county","military veterans","historical society collections","canals","heritage, state and provincial","war, world war ii","roadside markers, municipal","war, world war ii","heritage, city or county","roadside markers, municipal","heritage, city or county","heritage, city or county","heritage, city or county"]},"columns":[{"id":"name","name":"name","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["virginia, fairfax county history commission","maryland civil war trails","virginia civil war trails","maryland, lost rockville &amp;#8211; 1801 to 1850","baltimore and ohio railroad (b&amp;o)","braddock’s road and maj. gen. edward braddock","believe it or not","george washington slept here","NA","pony express national historic trail","manassas gap railroad","the historic national road","washington and old dominion (w&amp;od) railroad","west virginia civil war trails","north carolina civil war trails","chesapeake and ohio (c&amp;o) canal","virginia, prince william county historical commission","virginia, historic occoquan","virginia, wartime manassas walking tour","antietam campaign war department markers","virginia, city of falls church","e clampus vitus","lincoln 1861 inaugural train stops","battlefield trails - civil war","virginia, norfolk heritage cannonball trail","wabash &amp; erie canal","orange and alexandria railroad","virginia, the city of alexandria","lewis &amp; clark expedition","maryland, saint mary's city","maryland, fort mchenry","oregon trail","defenses of washington","mark twain bret harte trail","maryland, gwynns falls trail","the washington-rochambeau route","pennsylvania, the harrisburg history project","new jersey, bergen county historical society","maryland, baltimore city historical markers","maryland, bolton hill historic district","maryland, washington county historical advisory committee","national historic landmarks","susquehanna and tidewater canal","florida, st. augustine freedom trail","gettysburg campaign","african american heritage trail","new york, historical society of rockland county","lincoln highway","william bartram trails","new jersey, morris county heritage commission","pennsylvania, battle of hanover walking tour","battlefield trails - revolutionary war","chickamauga campaign heritage trail","great indian warrior / trading path","ohio and erie canal","medal of honor recipients","ohio, delaware county historical society","freeman markers (richmond battlefields)","battlefield markers association","pennsylvania railroad (prr)","martin luther king, jr.","south carolina heritage corridor","pennsylvania civil war trails","new jersey, hunterdon county cultural and heritage commission","downtown heritage trail","santa fe trail","battlefield trails - war of 1812","general henry knox trail","postal mail and philately","the miami &amp; erie canal","tennessee civil war trails","looking for lincoln","arizona, the presidio trail","massachusetts bay colony&amp;#8212;tercentenary commission markers","new jersey, sussex county board of chosen freeholders","arizona, historic florence walking tour","indian wars battlefield trails","erie &amp; kalamazoo railroad","trail of tears","south carolina, abbeville historical sites tour","black hawk war","potawatomi trail of death","maryland, chesapeake city historic district","daughters of utah pioneers","sons of utah pioneers","utah, salt lake city downtown walking tour","utah pioneer trails and landmarks association","daughters of the american revolution","john hunt morgan’s raid - jefferson county, ohio","south carolina, anderson county historical association/society","south carolina, cherokee county historical and preservation society","arizona, pistols, plows and petticoats historic driving tour","mormon pioneer trail","california trail","overland trail","south carolina, abbeville county historical society/commission","south carolina, greenville county historic preservation commission","south carolina, mccormick county historical society","south carolina, mccormick county historical commission","the sullivan-clinton expedition against the iroquois indians","juan bautista de anza national historic trail","native sons/daughters of the golden west","south carolina, aiken county historical society","south carolina, aiken county historical commission","signers of the declaration of independence","south carolina, laurens county historical society","south carolina, saluda county historical commission","south carolina, saluda county historical society","south carolina, chester county historical commission","south carolina, colleton county historical society","south carolina, williamsburg county, three rivers historical society","south carolina, williamsburg county historical society","south carolina, calhoun county historical commission/society","south carolina, chesterfield county historical and preservation societies","dominguez y escalante expedition","south carolina, spartanburg music trail","whiskey rebellion","carnegie libraries","wisconsin, madison landmarks commission","wisconsin, dane county historical society","university of wisconsin","utah - kanab \"walk of fame\"","transcontinental railroad","the spirit of ’76, america’s bicentennial celebration","maryland, rockville's african american heritage walking tour","wisconsin’s maritime trails","california - sutter creek gold mine trail","works progress administration (wpa) projects","el camino real de tierra adentro","statue of liberty replicas","missouri - a state divided: the civil war in missouri","illinois, sprinfield - lincoln home national historic site","erie canal","south carolina, preservation society of charleston","mississippi blues trail","south carolina, greenwood county historical society","mojave road (old government road)","south carolina, york county historical commission","south carolina, union county historical society","spirit of the american doughboy - e. m. viquesney","desert training center","u.s. route 66","stephen tyng mather","san diego - gaslamp quarter","forbes road","rosenwald schools","el camino real de los tejas national historic trail","u.s.s. maine memorial markers","new jersey - fort hancock walking tour","florida - west volusia historical society","south carolina, charleston county, st. james- santee parish historical society","south carolina, beaufort county historical society","historic new york state","florida - sanford historic preservation board","indiana cemetery heritage","antonio de espejo entrada of 1582-1583","georgia historical society","indiana historical bureau markers","mississippi country music trail","natchez trace","sons of the american revolution (sar)","portolá expedition","kansas city - native sons and daughters of greater kansas city","ohio, scioto county, experience our heritage","city of david tour","caesarea philippi tour","sherman’s march to the sea","kansas, alma, city of native stone","tel megiddo","kansas, dodge city trail of fame","the tiberias archeological park","general herkimer's 40 mile march","gettysburg - seminary ridge historic walking tour","michigan historical commission","ohio historical society / the ohio history connection","kansas, osawatomie driving tour","missouri’s civil war","idaho state historical society","victoria cross and george cross recipients","kansas historical society","nebraska state historical society","illinois state historical society","wisconsin historical society","kentucky historical society","blue ridge parkway","colorado - history colorado","liberty bell replica","iowa - state historical society of iowa","american quarter horse markers","comanche trail into mexico","united daughters of the confederacy","star spangled banner national historic trail","southern pacific railroad","sons of confederate veterans/united confederate veterans","missouri, the state historical society of","unesco world heritage sites","ohio revolutionary memorial commission","mississippi freedom trail","military order of the purple heart","minnesota historical society","minnesota, little falls heritage preservation walking/driving tour","harriet tubman underground railroad byway","great lakes seaway trail national scenic byway","logan circle heritage trail","missouri, battle of springfield","texas 1936 centennial markers and monuments","kansas, baxter springs civil war tour","oklahoma historical society","mormon battalion","nevada - 20-mile museum - hwy 40 scenic bypass","donner summit historical society","civil rights in education heritage trail","civilian conservation corps (ccc)","union canal","merci train boxcars","katy trail state park","missouri, clay county historic landmarks","john hunt morgan heritage trail in indiana","francis asbury, traveling methodist preacher","applegate trail","original federal boundary stones","missouri, pleasant hill downtown association","pennsylvania - beaver county historical research and landmarks foundation","france - bayeux - circuit du vieux bayeux","great platte river road","virginia, clinch river forts circa 1774","4-h youth program","chicago rock island &amp; pacific railway","buffalo soldiers","arkansas civil war sesquicentennial commission","the crooked road: virginia’s heritage music trail","san antonio-el paso road","madonnas of the trail","\"safety follows wisdom\" portland cement association safety trophies","d.c. - points of light volunteer pathway","arkansas centennial commission","butterfield overland mail","the colonial dames of america, national society of","chenango canal","california - walnut creek heritage walk","new jersey women’s heritage trail","california - el cerrito - san pablo avenue historical-cultural pavers","us navy armed guard","illinois, chicago landmarks commission","michigan - union city heritage water trail","atchison, topeka and santa fe railway","b-52 bomber crash in maryland","mississippi mound trail","motorcities national heritage area","pennsylvania history tour, tobyhanna township","michigan - hemingway's michigan","michigan - little traverse regional historical society","still on patrol","john hunt morgan heritage trail in kentucky","louisiana, marksville historical markers driving tour","united states daughters of 1812, national society","tennessee - history of the farragut area","mississippi state historical marker program","the four chaplains","michigan - historical society of michigan","national natural landmarks","coal creek watershed foundation","francis marion trail","asce civil engineering landmarks","georgia civil war trails","john hunt morgan heritage trail in ohio","chickamauga and chattanooga national military park, orchard knob reservation","chickamauga and chattanooga national military park, bragg reservation","chickamauga and chattanooga national military park, sherman reservation","chickamauga and chattanooga national military park, iowa reservation","chickamauga and chattanooga national military park, cravens house reservation","michigan walk of fame","louisiana ancient mounds trail","mississippi - natchez trails","canada, historic sites and monuments board","chickamauga and chattanooga national military park, seventy-third pennsylvania reservation","chickamauga and chattanooga national military park, delong reservation","chickamauga and chattanooga national military park, turchin reservation","chickamauga and chattanooga national military park, ohio reservation","chickamauga and chattanooga national military park, point park","chickamauga and chattanooga national military park, lookout mountain","chickamauga and chattanooga national military park, missionary ridge","chickamauga and chattanooga national military park: november 23, 1863","chickamauga and chattanooga national military park: november 24, 1863","chickamauga and chattanooga national military park: november 25, 1863","kentucky, sportman’s hill","anniston civil rights trail, alabama","distinguished service cross/navy cross/air force cross recipients","william g. pomeroy foundation","northern virginia civil war graffiti trail","a tennessee overhill experience - from furs to factories","tennessee, greeneville, windows to the past historic mural project","new york, new york city historic landmarks preservation center cultural medallions","ledroit park/bloomingdale heritage trail","atchafalaya water heritage trail","daughters of colonial wars","meridian, mississippi civil rights trail","tennessee - oak hill - secret city commemorative walk","oregon beaver boards","nobles trail","historic trees","daughters of the american colonists","berlin wall","lassen trail and burnett cutoff","beckwourth trail","mississippi, vicksburg heritage walking trail","tennessee historical commission","sons and daughters of idaho pioneers","the nez perce trail","uk, england, london, marchmont association plaques","colorado - montrose - preserving our heritage","old spanish national trail","uk, england, city of london corporation","american presbyterian and reformed historic sites","montana national register sign program","the hatfield-mccoy feud","appalachian iron furnaces","national cemeteries","freedom rock memorials","booth's escape","william g. pomeroy foundation legends &amp; lore series","dc, art on call","george washington carver","shaw heritage trail","tenleytown heritage trail","anacostia heritage trail","brightwood heritage trail","greater deanwood heritage trail","federal triangle heritage trail","barracks row heritage trail","columbia heights heritage trail","adams morgan heritage trail","southwest heritage trail","mount pleasant heritage trail","greater h street heritage trail","georgia avenue / pleasant plains heritage trail","greater u street heritage trail","delaware canal (aka delaware division of the pennsylvania canal)","lehigh canal","the colonial dames of america","national votes for women trail","jewish american society for historic preservation.","uk, northern ireland, ulster history circle","colorado, denver, wall street of the rockies","missouri, st. louis walk of fame","trails west inc.","kentucky, bowling green heritage walk","james joyce pub awards","tuskegee civil rights and historic trail, alabama","illinois, remembering the 1917 east st. louis race riot","historically black colleges and universities","grammy award winners","california historical landmarks","pennsylvania historical and museum commission","illinois, waterloo beautification committee","kentucky, city of west point","mary jemison - white woman of the genessee","ieee milestones in electrical engineering and computing","rainbow honor walk","kentucky - confederate raids and invasions, and a federal retreat","covered bridges","d.c. - transportation walk","ventura county historical landmarks","new mexico women’s historic marker initiative","quakerism","asae historic landmarks of agricultural engineering","loop trolley","missouri, st. louis - history underfoot","missouri, st. louis, the cherokee-lemp history walk","tennessee, the historical commission of metropolitan nashville and davidson county","missouri, st. louis cardinals greatest moments","yreka trail","henness pass","virginia, fredericksburg: timeless.","virginia, spotsylvania county museum","west virginia, washington heritage trail","tennessee, memphis, center city commission","el camino real, &amp;#8220;the king's highway&amp;#8221; (california)","truckee trail","chinese heritage sites of the american west","sons of the american colonists","west virginia 9","indiana, cultural trail indianapolis","the colonial dames xvii century, national society","historic sites in journalism","west virginia archives and history","virginia, old town fairfax","missouri, city of washington","missouri, owensville quilt patterns","pennsylvania, newtown square historical preservation society","nova parks","missouri, st. louis, cherokee station business association","the rhode island black heritage society","time capsules","acadian history","frostburg state university student government association","maryland, town of oakland","route 66 roadside attractions","maryland, friendsville history tour","kentucky, harrodsburg, james harrod trust","jesse james","african methodist episcopal (ame) church","african methodist episcopal zion (ame zion) church","christian methodist episcopal (cme) church","west virginia, the city of thomas","unitarian universalism (uuism)","mary mcleod bethune","mary church terrell","eleanor roosevelt","susan b. anthony","elizabeth cady stanton","clara barton","the beatles","rural electrification &amp;#128161;","former u.s. presidents: #01 george washington","former u.s. presidents: #44 barack obama","former u.s. presidents: #43 george w. bush","former u.s. presidents: #42 william jefferson \"bill\" clinton","former u.s. presidents: #41 george h.w. bush","former u.s. presidents: #40 ronald reagan","new jersey, city of atlantic city","miss america walk","former u.s. presidents: #39 james earl \"jimmy\" carter, jr.","former u.s. presidents: #38 gerald r. ford, jr.","former u.s. presidents: #37 richard m. nixon","former u.s. presidents: #36 lyndon b. johnson","former u.s. presidents: #35 john f. kennedy","former u.s. presidents: #34 dwight d. eisenhower","former u.s. presidents: #33 harry s. truman","former u.s. presidents: #32 franklin d. roosevelt","former u.s. presidents: #31 herbert hoover","former u.s. presidents: #30 calvin coolidge","former u.s. presidents: #29 warren g. harding","former u.s. presidents: #28 woodrow wilson","former u.s. presidents: #27 william howard taft","former u.s. presidents: #26 theodore roosevelt","former u.s. presidents: #25 william mckinley","former u.s. presidents: #22 and #24 grover cleveland","former u.s. presidents: #23 benjamin harrison","former u.s. presidents: #21 chester a. arthur","former u.s. presidents: #20 james a. garfield","former u.s. presidents: #19 rutherford b. hayes","former u.s. presidents: #18 ulysses s. grant","former u.s. presidents: #17 andrew johnson","former u.s. presidents: #16 abraham lincoln","former u.s. presidents: #15 james buchanan","former u.s. presidents: #14 franklin pierce","former u.s. presidents: #13 millard fillmore","former u.s. presidents: #12 zachary taylor","former u.s. presidents: #11 james k. polk","former u.s. presidents: #10 john tyler","former u.s. presidents: #09 william henry harrison","former u.s. presidents: #08 martin van buren","former u.s. presidents: #07 andrew jackson","former u.s. presidents: #06 john quincy adams","former u.s. presidents: #05 james monroe","former u.s. presidents: #04 james madison","former u.s. presidents: #03 thomas jefferson","former u.s. presidents: #02 john adams","national underground railroad network to freedom","lighthouses","delaware public archives","delaware state parks","university of delaware","art deco","historic bells","west virginia university legends","missouri, chillicothe downtown mural walking tour","west virginia, berkeley springs, town of bath lots","dc, then and now: capitol riverfront","pennsylvania, easton, karl stirner arts trail","bend heritage walk","asm international historical landmarks","ohio, napoleon heritage society","west virginia, martinsburg historic properties","villanova university","kit carson trail","virginia, strasburg, how strata shaped strategy: the hupp's hill civil war/karst interpretive walking trail","missouri, overland historical society","missouri, st. louis, soulard historic district &amp;#9884;&amp;#65039;","los angeles historic-cultural monument","schuylkill canal","aiaa historic aerospace sites","women airforce service pilots (wasp)","morris canal","florida east coast railroad and hotels","former u.s. presidents: #45 donald j. trump","virginia legends walk","washington’s burgess routes","ohio, portsmouth, floodwall murals","lynching in america","francis marion trail","virginia, corporation of newport news","tennessee music pathways","missouri, columbia, african-american heritage trail","the '89er trail","tuskegee airmen","virginia, lexington, righteous and rascals of rockbridge","north carolina division of archives and history","virginia department of historic resources","minnesota: geological society of minnesota","the &amp;#268;i&amp;#269;m&amp;#601;hán trail, port townsend, washington","washington, port townsend, hidden history","south dakota state historical society markers","lost at sea","the legacy walk","canada, ontario heritage foundation","washington, ballard historical society","pennsylvania, pittsburgh history and landmarks foundation","lafayette’s farewell tour","the grand army of the republic","new york, broadway - the canyon of heroes","maine, portland freedom trail","the museum in the streets®: auburn-lewiston, maine","the museum in the streets®: augusta, maine – the civil war","the museum in the streets®: augusta, maine","the museum in the streets®: biddeford, maine","the museum in the streets®: kennebunk, maine","georgia, historic macon music registry","the museum in the streets®: urbanna, virginia","the museum in the streets®: danbury, connecticut","the museum in the streets®: ridgefield, connecticut","the museum in the streets®: minneapolis, minnesota","the museum in the streets®: altamont, new york","virginia, town of herndon","virginia, falls church, tinner hill heritage trail","the museum in the streets®: millbrook, new york","the museum in the streets®: belfast, maine","the museum in the streets®: searsport, maine","birmingham civil rights heritage trail","maryland historical trust","chicago tribute","louisiana myths &amp; legends byway","maryland, mardela springs, barren creek springs village","san francisco giants wall of fame","pennsylvania canal","historic mechanical engineering landmarks","the museum in the streets®: ossining, new york","new york, flushing freedom mile","the museum in the streets®: hastings-on-hudson, new york","tennessee, city of alcoa","dc, american revolution statuary","west virginia, the city of keyser","missouri – battle of westport","city of madrid - \"yellow diamond\"","greenwich village society for historic preservation","greenville textile heritage","tennessee – williamson county historical society","hungry for history","rotary international","barcelona programes de memòria","pennsylvania, washington county history and landmarks foundation","heroes of the dutch resistance (gseg)","roissy: étonnant village / unexpected village","histoire de paris","indiana, women's club of newburgh","new york, staten island, willowbrook mile","northwestern pacific railroad","give streets a face / geef straten een gezicht","dutch politicians (gseg)","scientists (gseg)","dutch sports (gseg)","dutch artists (gseg)","groningen stadsmonumenten","dutch literature (gseg)","outer banks national scenic byway","minnesota great river road","grant’s march through louisiana","tennessee, clinton historic downtown","dutch naval history (gseg)","milan red-gray stelae","michigan legal milestones","knoxville history project - downtown art wraps","united methodist church historic sites","pennsylvania state university","historic graffiti cruise route","pennsylvania, ride! philadelphia","pennsylvania keystone markers","historic transportation canals","gold star families","university of illinois","women (gseg)","national register of historic places","the thailand-burma railway","selskabet for oslo byes vel","american revolution and u.s. constitution bicentennial living witness trees","georgia - augusta african-american history walk","liberation of paris","the holocaust","old mill park","captain john smith chesapeake national historic trail","nyc parks","ohio, kings island","new hampshire historical highway markers","trafalgar way","new hampshire, the black heritage trail of","borscht belt historical marker project","literary landmarks","baseball hall of famers","nc civil rights trail","jens jensen","valor in aerial operations","chicago's charter jubilee","the cross of sacrifice","mississippi writers trail","new mexico, historical society of new mexico","fort scott, kansas","the freedom tree","alabama historical association","city of vancouver heritage building","distinguished service medal","kansas, harvey county historical society","chesapeake &amp; delaware (c&amp;d) canal","upstate heritage quilt trail","u.s. national d-day memorial","ireland, dublin city council commemorative plaques","stolpersteine","dora franklin finley african-american heritage trail of mobile","porto world heritage","perry county heritage trail in pennsylvania.","wisconsin, kenosha city landmarks","canada, ontario, prescott designated heritage buildings"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}},{"id":"optional_title","name":"optional_title","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["roadside marker programs, county","war, u.s. civil","war, u.s. civil","walking and driving tours","railroads","roads and trails","","former u.s. presidents","NA","roads and trails","railroads","roads and trails","railroads","war, u.s. civil","war, u.s. civil","canals","historical society collections","walking and driving tours","walking and driving tours","war, u.s. civil","walking and driving tours","heritage, regional","former u.s. presidents","war, u.s. civil","walking and driving tours","canals","railroads","roadside markers, municipal","roads and trails","walking and driving tours","walking and driving tours","roads and trails","war, u.s. civil","roads and trails","walking and driving tours","war, u.s. revolutionary","historical society collections","historical society collections","walking and driving tours","walking and driving tours","historical society collections","landmark collections","canals","walking and driving tours","war, u.s. civil","washington dc heritage trails","historical society collections","roads and trails","roads and trails","historical society collections","walking and driving tours","war, u.s. revolutionary","war, u.s. civil","roads and trails","canals","valor in war","historical society collections","war, u.s. civil","war, u.s. civil","railroads","civil rights","walking and driving tours","war, u.s. civil","historical society collections","washington dc heritage trails","roads and trails","war of 1812","war, u.s. revolutionary","communications","canals","war, u.s. civil","former u.s. presidents","walking and driving tours","heritage, state and provincial","historical society collections","walking and driving tours","wars, u.s. indian","railroads","roads and trails","walking and driving tours","wars, u.s. indian","wars, u.s. indian","walking and driving tours","heritage, regional","heritage, regional","walking and driving tours","historical society collections","heritage, national","war, u.s. civil","historical society collections","historical society collections","walking and driving tours","roads and trails","roads and trails","roads and trails","historical society collections","historical society collections","historical society collections","historical society collections","war, u.s. revolutionary","roads and trails","historical society collections","historical society collections","historical society collections","war, u.s. revolutionary","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","roads and trails","walking and driving tours","","education","historical society collections","historical society collections","education","walking and driving tours","railroads","","walking and driving tours","roads and trails","walking and driving tours","charity and public works","roads and trails","historical replicas","war, u.s. civil","walking and driving tours","canals","historical society collections","music","historical society collections","roads and trails","historical society collections","historical society collections","war, world war i","war, world war ii","roads and trails","environment and conservation","walking and driving tours","roads and trails","education","roads and trails","war, spanish-american","walking and driving tours","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","historical society collections","roads and trails","roadside marker programs, state","roadside marker programs, state","music","roads and trails","heritage, national","roads and trails","historical society collections","walking and driving tours","israel","israel","war, u.s. civil","walking and driving tours","israel","walking and driving tours","israel","war, u.s. revolutionary","war, u.s. civil","roadside marker programs, state","roadside marker programs, state","walking and driving tours","war, u.s. civil","roadside marker programs, state","valor in war","roadside marker programs, state","historical society collections","roadside marker programs, state","roadside marker programs, state","roadside marker programs, state","walking and driving tours","roadside marker programs, state","historical replicas","historical society collections","animals","roads and trails","heritage, national","war of 1812","railroads","heritage, national","historical society collections","heritage, international","historical society collections","civil rights","valor in war","historical society collections","walking and driving tours","abolition and the underground railroad","walking and driving tours","washington dc heritage trails","war, u.s. civil","heritage, state and provincial","war, u.s. civil","historical society collections","war, mexican american","roads and trails","historical society collections","civil rights","environment and conservation","canals","railroads","railroads","historical society collections","war, u.s. civil","religion","roads and trails","washington dc heritage trails","historical society collections","historical society collections","walking and driving tours","roads and trails","frontier forts","education","railroads","valor in war","war, u.s. civil","music","roads and trails","roads and trails","industry","washington dc heritage trails","roadside marker programs, state","roads and trails","heritage, national","canals","walking and driving tours","heritage, state and provincial","walking and driving tours","war, world war ii","historical society collections","walking and driving tours","railroads","war, cold","roads and trails","heritage, city or county","heritage, city or county","walking and driving tours","historical society collections","war, world war ii","war, u.s. civil","walking and driving tours","heritage, national","heritage, state and provincial","historical society collections","valor in war","historical society collections","environment and conservation","heritage, regional","roads and trails","industry","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","heritage, state and provincial","roads and trails","walking and driving tours","heritage, national","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","war, u.s. civil","sports","civil rights","valor in war","william g. pomeroy foundation","war, u.s. civil","heritage, state and provincial","heritage, city or county","heritage, city or county","washington dc heritage trails","environment and conservation","heritage, national","civil rights","war, world war ii","historical society collections","roads and trails","heritage, national","heritage, national","war, cold","roads and trails","roads and trails","walking and driving tours","roadside marker programs, state","heritage, regional","wars, u.s. indian","heritage, city or county","walking and driving tours","roads and trails","heritage, city or county","religion","historical society collections","folklore and customs","industry","military veterans","valor in war","war, u.s. civil","william g. pomeroy foundation","washington dc heritage trails","education","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","washington dc heritage trails","canals","canals","heritage, national","william g. pomeroy foundation","heritage, national","heritage, city or county","walking and driving tours","heritage, state and provincial","historical society collections","heritage, state and provincial","folklore and customs","civil rights","civil rights","education","music","landmark collections","roadside marker programs, state","historical society collections","roadside markers, municipal","war, french &amp; indian","industry","lgbt history","war, u.s. civil","bridges","washington dc heritage trails","landmark collections","heritage, state and provincial","religion","industry","railroads","walking and driving tours","walking and driving tours","historical society collections","sports","roads and trails","roads and trails","heritage, city or county","historical society collections","heritage, state and provincial","heritage, city or county","roads and trails","roads and trails","heritage, regional","heritage, national","roads and trails","roads and trails","heritage, national","communications","roadside marker programs, state","heritage, city or county","heritage, city or county","heritage, city or county","historical society collections","parks and recreational areas","walking and driving tours","heritage, state and provincial","heritage, city or county","heritage, international","education","heritage, city or county","roads and trails","walking and driving tours","historical society collections","outlaws","religion","religion","religion","walking and driving tours","religion","civil rights","civil rights","civil rights","civil rights","civil rights","war, u.s. civil","music","communications","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","roadside markers, municipal","walking and driving tours","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","former u.s. presidents","abolition and the underground railroad","communications","roadside marker programs, state","parks and recreational areas","education","architecture","communications","sports","walking and driving tours","walking and driving tours","heritage, city or county","walking and driving tours","walking and driving tours","industry","historical society collections","historical society collections","education","roads and trails","war, u.s. civil","historical society collections","historical society collections","landmark collections","canals","industry","war, world war ii","canals","railroads","former u.s. presidents","heritage, state and provincial","roads and trails","walking and driving tours","civil rights","war, u.s. revolutionary","historical society collections","music","heritage, city or county","roads and trails","war, world war ii","walking and driving tours","roadside marker programs, state","roadside marker programs, state","historical society collections","roads and trails","heritage, city or county","roadside marker programs, state","ships","lgbt history","heritage, state and provincial","historical society collections","landmark collections","war, u.s. revolutionary","heritage, national","walking and driving tours","abolition and the underground railroad","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","music","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","the museum in the streets®","roadside markers, municipal","walking and driving tours","the museum in the streets®","the museum in the streets®","the museum in the streets®","civil rights","roadside marker programs, state","roadside markers, municipal","roads and trails","walking and driving tours","sports","canals","industry","the museum in the streets®","historical society collections","the museum in the streets®","roadside markers, municipal","war, u.s. revolutionary","walking and driving tours","war, u.s. civil","roadside markers, municipal","historical society collections","industry","roadside marker programs, county","william g. pomeroy foundation","charity and public works","roadside markers, municipal","landmark collections","give streets a face / geef straten een gezicht","roadside markers, municipal","roadside markers, municipal","heritage, city or county","walking and driving tours","railroads","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","give streets a face / geef straten een gezicht","roadside markers, municipal","give streets a face / geef straten een gezicht","walking and driving tours","walking and driving tours","war, u.s. civil","walking and driving tours","give streets a face / geef straten een gezicht","roadside markers, municipal","judicial","walking and driving tours","religion","education","heritage, city or county","walking and driving tours","roadside marker programs, state","william g. pomeroy foundation","valor in war","education","give streets a face / geef straten een gezicht","landmark collections","war, world war ii","historical society collections","environment and conservation","walking and driving tours","war, world war ii","war, world war ii","industry","roads and trails","parks and recreational areas","parks and recreational areas","roadside marker programs, state","roads and trails","heritage, state and provincial","heritage, state and provincial","landmark collections","sports","civil rights","parks and recreational areas","valor in war","heritage, city or county","valor in war","communications","historical society collections","frontier forts","valor in war","roadside marker programs, state","heritage, city or county","military veterans","historical society collections","canals","heritage, state and provincial","war, world war ii","roadside markers, municipal","war, world war ii","heritage, city or county","roadside markers, municipal","heritage, city or county","heritage, city or county","heritage, city or county"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"nowrap":true,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"tkmhxymcby","dataKey":"0d76ebe172de21b8a67e65f3d0fb6128"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
